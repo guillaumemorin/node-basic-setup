@@ -1,0 +1,28 @@
+{
+  "name": "node_basic_setup",
+  "version": "1.0.0",
+  "description": "node basic setup for testing purpose",
+  "main": "index.js",
+  "dependencies": {
+    "jade": "^1.8.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guillaumemorin/node-basic-setup.git"
+  },
+  "keywords": [
+    "node",
+    "basic",
+    "setup"
+  ],
+  "author": "Guillaume Morin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guillaumemorin/node-basic-setup/issues"
+  },
+  "homepage": "https://github.com/guillaumemorin/node-basic-setup"
+}
