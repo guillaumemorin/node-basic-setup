@@ -11,11 +11,11 @@ http.createServer(function (req, res) {
 	// Basic try/catch error handling, see http://nodejs.org/api/domain.html for nodejs recommanded one
 	try {
 
-		var req_path = url.parse(req.url).path;
+		var req_path = url.parse(req.url).pathname;
 
 		if (typeof routing.route[req_path] === 'string') {
 			res.writeHead(200, {'Content-Type': 'text/html'});
-			res.end(jade.renderFile(conf.templates.path + routing.route[req_path] + conf.templates.ext));
+			res.end(jade.renderFile(conf.templates.path + routing.route[req_path]));
 			return;
 		}
 

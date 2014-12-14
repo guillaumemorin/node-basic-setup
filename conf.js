@@ -1,7 +1,6 @@
 module.exports = {
 	templates: {
-		path: __dirname + '/html/',
-		ext: '.jade'
+		path: __dirname + '/html/'
 	},
 	mime_type: {
 		js: 'text/javascript',
