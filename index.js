@@ -4,7 +4,7 @@ var jade = require('jade'),
 	path = require('path'),
 	fs = require('fs'),
 	conf = require('./conf.js'),
-	routing = require('./routing.js');
+	route = require('./route.js');
 
 http.createServer(function (req, res) {
 
@@ -13,9 +13,9 @@ http.createServer(function (req, res) {
 
 		var req_path = url.parse(req.url).pathname;
 
-		if (typeof routing.route[req_path] === 'string') {
+		if (typeof route[req_path] === 'string') {
 			res.writeHead(200, {'Content-Type': 'text/html'});
-			res.end(jade.renderFile(conf.templates.path + routing.route[req_path]));
+			res.end(jade.renderFile(conf.templates.path + route[req_path]));
 			return;
 		}
 
@@ -27,7 +27,7 @@ http.createServer(function (req, res) {
 		}
 
 		res.writeHead(404, {"Content-Type": "text/html"});
-		res.end(jade.renderFile(conf.templates.path + '404.jade', {error: '404. Nothing here!'}));
+		res.end(jade.renderFile(conf.templates.path + '404', {error: '404. Nothing here!'}));
 
 	} catch (e) {
 		res.writeHead(500, {"Content-Type": "text/plain"});
