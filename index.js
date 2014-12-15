@@ -4,7 +4,7 @@ var jade = require('jade'),
 	path = require('path'),
 	fs = require('fs'),
 	conf = require('./conf.js'),
-	route = require('./route.js');
+	routes = require('./routes.js');
 
 http.createServer(function (req, res) {
 
@@ -13,9 +13,9 @@ http.createServer(function (req, res) {
 
 		var req_path = url.parse(req.url).pathname;
 
-		if (typeof route[req_path] === 'string') {
+		if (typeof routes[req_path] === 'string') {
 			res.writeHead(200, {'Content-Type': 'text/html'});
-			res.end(jade.renderFile(conf.templates.path + route[req_path]));
+			res.end(jade.renderFile(conf.templates.path + routes[req_path]));
 			return;
 		}
 
