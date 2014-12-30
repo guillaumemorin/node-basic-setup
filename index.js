@@ -4,9 +4,10 @@ var jade = require('jade'),
 	path = require('path'),
 	fs = require('fs'),
 	conf = require('./conf.js'),
+	ws = require('./websocket.js'),
 	routes = require('./routes.js');
 
-http.createServer(function (req, res) {
+var app = http.createServer(function (req, res) {
 
 	// Basic try/catch error handling, see http://nodejs.org/api/domain.html for nodejs recommanded one
 	try {
@@ -34,4 +35,7 @@ http.createServer(function (req, res) {
 		res.end('Something went wrong! :(');
 	}
 }).listen(1337, '127.0.0.1');
+
+ws.init(app);
+
 console.log('Server running at http://127.0.0.1:1337/');
