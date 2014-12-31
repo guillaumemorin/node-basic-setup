@@ -6,7 +6,6 @@
   "dependencies": {
     "jade": "*",
     "socket.io": "*",
-    "gulp": "*",
     "gulp-nodemon": "*"
   },
   "devDependencies": {},

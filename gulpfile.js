@@ -1,5 +1,5 @@
-var gulp = require('gulp'),
-	nodemon = require('gulp-nodemon');
+var gulp = require('gulp');
+var nodemon = require('gulp-nodemon');
 
 gulp.task('webserver', function () {
 	nodemon({script: 'index.js', ext: 'html js'})

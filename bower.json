@@ -1,0 +1,20 @@
+{
+  "name": "node_basic_setup",
+  "dependencies": {
+    "ember": "*"
+  },
+  "main": "index.js",
+  "version": "0.0.0",
+  "homepage": "https://github.com/guillaumemorin/node-basic-setup",
+  "authors": [
+    "Guillaume Morin <gmorin.pro@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "public/components",
+    "test",
+    "tests"
+  ]
+}
