@@ -1,11 +1,12 @@
 {
   "name": "node_basic_setup",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "node basic setup for testing purpose",
   "main": "index.js",
   "dependencies": {
     "jade": "*",
     "socket.io": "*",
+    "gulp-uglify": "*",
     "gulp-nodemon": "*"
   },
   "devDependencies": {},
