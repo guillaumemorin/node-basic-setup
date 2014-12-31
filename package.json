@@ -5,7 +5,9 @@
   "main": "index.js",
   "dependencies": {
     "jade": "*",
-    "socket.io": "*"
+    "socket.io": "*",
+    "gulp": "*",
+    "gulp-nodemon": "*"
   },
   "devDependencies": {},
   "scripts": {
