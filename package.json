@@ -4,8 +4,8 @@
   "description": "node basic setup for testing purpose",
   "main": "index.js",
   "dependencies": {
-    "jade": "^1.8.1",
-    "socket.io": "^1.2.1"
+    "jade": "*",
+    "socket.io": "*"
   },
   "devDependencies": {},
   "scripts": {
