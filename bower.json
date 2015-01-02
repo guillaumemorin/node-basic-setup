@@ -1,8 +1,6 @@
 {
   "name": "node_basic_setup",
-  "dependencies": {
-    "ember": "*"
-  },
+  "dependencies": {},
   "main": "index.js",
   "version": "0.0.0",
   "homepage": "https://github.com/guillaumemorin/node-basic-setup",

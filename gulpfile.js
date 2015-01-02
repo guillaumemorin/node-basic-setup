@@ -6,15 +6,15 @@ var minifyCss = require('gulp-minify-css');
 
 gulp.task('js', function() {
   gulp.src(['js/*.js'])
-  .pipe(concat('core.js'))
   .pipe(uglify())
+  .pipe(concat('core.js'))
   .pipe(gulp.dest('build/'))
 })
 
 gulp.task('css', function() {
   gulp.src(['css/*.css'])
-  .pipe(concat('core.css'))
   .pipe(minifyCss())
+  .pipe(concat('core.css'))
   .pipe(gulp.dest('build/'))
 })
 
