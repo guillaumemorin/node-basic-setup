@@ -21,7 +21,7 @@ var app = http.createServer(function (req, res) {
 		}
 
 		// Serve static content
-		if (path.dirname(req_path) === '/public' && fs.existsSync(__dirname + req_path)) {
+		if (path.dirname(req_path) === '/build' && fs.existsSync(__dirname + req_path)) {
 			res.writeHead(200, {'Content-Type': conf.mime_type[path.extname(req_path).split('.')[1]]});
 			res.end(fs.readFileSync(__dirname + req_path));
 			return;

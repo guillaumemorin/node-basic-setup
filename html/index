@@ -2,8 +2,8 @@ doctype html
 html(lang="en")
 	head
 		title= 'node basic setup'
-		script(type='text/javascript', src='/public/test.js').
+		script(type='text/javascript', src='/build/core.js').
 		script(type='text/javascript', src='/socket.io/socket.io.js').
-		link(rel='stylesheet', type='text/css', href='/public/test.css').
+		link(rel='stylesheet', type='text/css', href='/build/core.css').
 	body
 		h1 node-basic-setup
