@@ -4,6 +4,22 @@ var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var minifyCss = require('gulp-minify-css');
 
+/*
+ *  Need to install gulp-browserify, react, reactify first!
+ */
+// var browserify = require('gulp-browserify');
+// var reactify = require('reactify');
+
+gulp.task('react', function() {
+  gulp.src('js/react/*.js')
+  .pipe(browserify({
+    transform: [reactify]
+  }))
+  .pipe(uglify())
+  .pipe(concat('react.js'))
+  .pipe(gulp.dest('build'))
+})
+
 gulp.task('js', function() {
   gulp.src(['js/*.js'])
   .pipe(uglify())
