@@ -15,6 +15,18 @@ var app = http.createServer(function (req, res) {
 		var req_path = url.parse(req.url).pathname;
 
 		if (typeof routes[req_path] === 'string') {
+
+			// html files //
+			// fs.readFile(conf.templates.path + routes[req_path], function (err, html) {
+			// 	if (err) {
+			// 		throw err;
+			// 	}
+			// 	res.writeHead(200, {'Content-Type': 'text/html'});
+			// 	res.write(html); 
+			// 	res.end();
+			// });
+
+			// jade files //
 			res.writeHead(200, {'Content-Type': 'text/html'});
 			res.end(jade.renderFile(conf.templates.path + routes[req_path]));
 			return;
